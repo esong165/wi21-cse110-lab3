@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <Title>Eric Song's User Page (with HTML)</Title>
+        <meta charset="utf-8">
+        <link href="./dummy.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>
+                Welcome to Eric Song's Homepage!
+            </h1>
+            <picture>
+                <source srcset="cselogo.jpg" media="(min-width: 800px)">
+                <img src="cse-building.jpg" alt="">
+            </picture>
+            <iframe id="CSEWebpage"
+                title="CSE Webpage"
+                width="300"
+                height="200"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.6189272131332!2d-117.23571218505566!3d32.881800580940556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc06c3409a5d5f%3A0xa7dc3be7597d4d47!2sComputer%20Science%20and%20Engineering%20Building!5e0!3m2!1sen!2sus!4v1610500203951!5m2!1sen!2sus">
+            </iframe>
+            <hr>
+            <nav>
+                <ol>
+                    <li><a href="#quote">Favorite Quote</a></li>
+                    <li><a href="#exp">Programming Experience</a></li>
+                </ol>
+            </nav>
+            <hr>
+        </header>
+        <main>
+           <section>
+                <h2 id="quote">
+                    Favorite Quote
+                </h2>
+                <p>
+                    "Start early, <br> start often."
+                </p>
+
+                <aside>
+                    <p>
+                        <span>
+                            This quote is <i>drilled</i> into the minds of lower-division 
+                            CSE students in hopes of <b>enforcing good work habits</b>. 
+                        </span>
+                    </p>
+                </aside>
+
+                <p>
+                    I like this quote because it has been <strong>very applicable</strong> in my CSE studies.<br>
+                    <code>
+                        <pre>
+    public boolean success(boolean startEarly, boolean startOften){
+        return (startEarly && startOften);
+    }
+                        </pre>
+                    </code> 
+                </p>
+                    <div>
+                        <p>
+                            However, whether or not I follow the advice depends on <em>various</em> external factors.
+                        </p>
+                    </div>
+                <figure>
+                    <img src="./cse-building.jpg" alt="CSE Building">
+                    <figcaption>
+                        UCSD's CSE Building
+                    </figcaption>
+                </figure>
+            </section>
+            <section>
+                <p>Here is a sample video:</p>
+                <video controls width="250">
+                    <source src="sample-mp4-file.mp4">
+                </video>
+                <p>Here is some sample audio:</p>
+                <audio controls src="Kalimba.mp3"></audio>
+            </section>
+            <section>
+                <canvas width="300" height="300">
+                    Canvas failed to load.
+                </canvas>
+                <script>
+                    const canvas = document.querySelector('canvas');
+                    const ctx = canvas.getContext("2d");
+                    const grad = ctx.createLinearGradient(0,200,200,0);
+                    grad.addColorStop(0,"blue");
+                    grad.addColorStop(1,"yellow");
+                    ctx.fillStyle = grad;
+                    ctx.fillRect(10,10,150,100);
+                </script>
+                <svg viewBox="0 0 150 20" stroke="blue" fill="yellow">
+                    <circle cx="10" cy="10" r="5"></circle>
+                    <circle cx="20" cy="10" r="3"></circle>
+                </svg>
+            </section>
+            <hr>
+            <section>
+                <h2 id="exp">
+                    Programming Experience
+                </h2>
+                <h3>Languages:</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>C</li>
+                    <li>C#</li>
+                    <li>C++</li>
+                    <li>Assembly</li>
+                </ul>
+                <h3>Technologies:</h3>
+                <ul>
+                    <li>Linux/Unix</li>
+                    <li>Git</li>
+                    <li>Bash</li>
+                    <li>Unity</li>
+                </ul>
+            </section>
+
+            <table id="CourseList">
+                <thead>
+                    <tr>
+                        <td>Course Department</td>
+                        <td>Course Code</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            
+            <div id = "clickThis"></div>
+            <template id="clickTemp">
+                <div>Click this</div>
+            </template>
+            <script>
+                const container = document.getElementbyId("clickThis");
+                const template = document.getElementbyId("clickTemp");
+                function clickHandler(event){
+                    alert("Clicked it");
+                }
+                const clone = template.content.cloneNode(true);
+                clone.addEventListener("click", clickHandler);
+                container.appendChild(firstClone);
+            </script>
+        </main>
+        <footer>
+            <p>
+                This is a basic page made as an introduction to HTML.
+            </p>
+        </footer>
+    </body>
+</html>
