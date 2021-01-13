@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <Title>Eric Song's User Page (with HTML)</Title>
         <meta charset="utf-8">
@@ -75,6 +76,11 @@
                 </video>
                 <p>Here is some sample audio:</p>
                 <audio controls src="Kalimba.mp3"></audio>
+                <details>
+                    <summary>Source of mp3/mp4 files</summary>
+                    https://www.learningcontainer.com/sample-audio-file/<br>
+                    https://www.learningcontainer.com/mp4-sample-video-files-download/
+                </details>
             </section>
             <section>
                 <canvas width="300" height="300">
@@ -115,32 +121,106 @@
                     <li>Unity</li>
                 </ul>
             </section>
-
-            <table id="CourseList">
+            
+            <table id="courseTable">
+                <caption>Current course</caption>
+                <colgroup>
+                    <col span="1" class="dept">
+                    <col span="1" class="code">
+                </colgroup>
                 <thead>
-                    <tr>
-                        <td>Course Department</td>
-                        <td>Course Code</td>
-                    </tr>
+                <tr>
+                    <th>Department</th>
+                    <th>Course_Code</th>
+                </tr>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
             
-            <div id = "clickThis"></div>
-            <template id="clickTemp">
-                <div>Click this</div>
+            <template id="courserow">
+                <tr>
+                <td class="record"></td>
+                <td></td>
+                </tr>
             </template>
+
             <script>
-                const container = document.getElementbyId("clickThis");
-                const template = document.getElementbyId("clickTemp");
-                function clickHandler(event){
-                    alert("Clicked it");
+                if ('content' in document.createElement('template')) {
+                    var tbody = document.querySelector("tbody");
+                    var template = document.querySelector('#courserow');
+
+                    var clone = template.content.cloneNode(true);
+                    var td = clone.querySelectorAll("td");
+                    td[0].textContent = "CSE";
+                    td[1].textContent = "110";
+
+                    tbody.appendChild(clone);
                 }
-                const clone = template.content.cloneNode(true);
-                clone.addEventListener("click", clickHandler);
-                container.appendChild(firstClone);
             </script>
+            <form method="get" class="suggestions">
+                <label for="name">Please enter your name:</label>
+                <input type="text" id="name" name="name"><br>
+                <label for="UCSD">Are you a UCSD student/employee?</label>
+                <select id="UCSD">
+                    <optgroup label="Affiliated with UCSD">
+                        <option>Yes, I am a UCSD Faculty Member</option>
+                        <option>Yes, I am some other UCSD employee</option>
+                        <option>Yes, I am a UCSD undergraduate student</option>
+                        <option>Yes, I am a UCSD graduate student</option>
+                    </optgroup>
+                    <optgroup label="Not Affiliated with UCSD">
+                        <option>No, I am not affiliated with UCSD</option>
+                    </optgroup>
+                </select><br>
+                <fieldset>
+                    <legend>Rate your experience using this webpage</legend>
+                    <label for="1">1</label>
+                    <input type="radio" id="1" name="rating"><br>
+                    <label for="2">2</label>
+                    <input type="radio" id="2" name="rating"><br>
+                    <label for="3">3</label>
+                    <input type="radio" id="3" name="rating"><br>
+                    <label for="4">4</label>
+                    <input type="radio" id="4" name="rating"><br>
+                    <label for="5">5</label>
+                    <input type="radio" id="5" name="rating"><br>
+                </fieldset>
+                <textarea id="feedback" name="feedback" rows="10" cols="50">
+I think these features could have been improved:
+                </textarea><br>
+                <label for="lowerdiv">What was your favorite lower-division CS course?</label>
+                <input list="ldclasses" id="lowerdiv" name="lowerdiv">
+                <datalist id="ldclasses">
+                    <option value="CSE 8A">
+                    <option value="CSE 8B">
+                    <option value="CSE 11">
+                    <option value="CSE 12">
+                    <option value="CSE 15L">
+                    <option value="CSE 20">
+                    <option value="CSE 21">
+                    <option value="CSE 30">
+                </datalist><br>
+                <label for="color">Favorite color:</label>
+                <input type="color" id="color" name="color"><br>
+                <label for="agreement">Click the check box:</label>
+                <input type="checkbox" id="agreement" name="agreement"><br>
+                <label for="date">Today's date:</label>
+                <input type="date" id="date" name="date"><br>
+                <label for="meme">Favorite meme:</label>
+                <input type="file" id="meme" name="meme"><br>
+                <label for="telnum">Phone number:</label>
+                <input type="tel" id="telnum" name="telnum"><br>
+                <label for="mood">Current mood:</label>
+                <input type="range" id="mood" name="mood"><br>
+                <label for="minutes">Time spent answering these questions (in minutes):</label>
+                <input type="number" id="minutes" name="minutes"><br>
+                <label for="reset">Reset form:</label>
+                <input type="reset" id="reset" name="reset"><br>
+            </form>
+            <button class="submit" type="button">
+                Submit answers
+            </button>
         </main>
         <footer>
             <p>
