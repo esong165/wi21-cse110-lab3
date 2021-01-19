@@ -2,11 +2,9 @@
 name: CSS Addition
 about: Request addition of CSS
 title: "[CSS]"
-labels: enhancement
+labels: enhancement, CSS Topic
 assignees: ''
 
 ---
 
-Does any part of the page feel clunky/hard to use?
-
-Are there any sections that could be enhanced by CSS? If so, where/what CSS?
+Add this CSS Topic to the page
