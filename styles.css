@@ -4,15 +4,31 @@
 
 *{
     font-family: 'Courier Prime', monospace;
+    font-size: 1.8ch;
 }
 
 div {
     text-decoration: line-through;
+    font-size: 2.5ch;
 }
 
 [title~="cse"] {
     border-color: blue;
     border-style: solid;
-    border-width: 5px;
+    border-width: 3pt;
     border-radius: 20px;
-  }
+}
+
+#quotesection > p{
+    font-size: 150%
+}
+
+img + figcaption{
+    position: relative;
+    left: 1.8in;
+    font-weight: bold;
+}
+
+p::after {
+
+}
