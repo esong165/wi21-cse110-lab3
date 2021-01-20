@@ -1,3 +1,11 @@
-.quotebody{
-    color: hsl(120,50,40);
+.body{
+    color: hsl(120, 50%, 40%);
+}
+
+*{
+    font-family: 'Courier Prime', monospace;
+}
+
+div {
+    text-decoration: line-through;
 }
