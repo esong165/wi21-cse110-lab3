@@ -112,3 +112,9 @@ ol > li{
     border-style: solid;
     align-self: center;
 }
+
+@media screen and (min-width: 1000px){
+    header{
+        background-color: lightcoral;
+    }
+}
