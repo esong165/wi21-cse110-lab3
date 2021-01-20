@@ -29,6 +29,14 @@ img + figcaption{
     font-weight: bold;
 }
 
-p::after {
+a:hover {
+    color:green;
+}
 
+a:active,p:active {
+    color:red;
+}
+
+p span{
+    color: blueviolet;
 }
