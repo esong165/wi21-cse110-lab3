@@ -1,5 +1,7 @@
 .body{
     color: hsl(120, 50%, 40%);
+    max-width: 30%;
+    min-width: 10%;
 }
 
 /* Sets the font and font size of the entire webpage */
