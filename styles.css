@@ -92,4 +92,23 @@ ol > li{
 
 .item{
     flex-grow: 1;
+    border-color: red;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 60px 40px 1in;
+    grid-template-rows: 30px 50% 20px;
+    column-gap: 20px;
+    row-gap: 5px;
+    justify-items: stretch;
+}
+
+.griditem{
+    border-color: mediumslateblue;
+    border-width: 2px;
+    border-style: solid;
+    align-self: center;
 }
