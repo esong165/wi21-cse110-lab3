@@ -2,7 +2,8 @@
     color: hsl(120, 50%, 40%);
 }
 
-*{
+/* Sets the font and font size of the entire webpage */
+* {
     font-family: 'Courier Prime', monospace;
     font-size: 1.8ch;
 }
