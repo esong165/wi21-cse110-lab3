@@ -82,3 +82,14 @@ ol > li{
 .tech > li{
     display: block;
 }
+
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.item{
+    flex-grow: 1;
+}
