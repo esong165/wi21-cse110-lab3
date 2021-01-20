@@ -72,3 +72,11 @@ section ~ p{
 p::first-letter{
     font-size: 200%;
 }
+
+ol > li{
+    display: inline;
+}
+
+.tech > li{
+    display: block;
+}
