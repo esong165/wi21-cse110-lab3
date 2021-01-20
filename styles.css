@@ -9,3 +9,10 @@
 div {
     text-decoration: line-through;
 }
+
+[title~="cse"] {
+    border-color: blue;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 20px;
+  }
